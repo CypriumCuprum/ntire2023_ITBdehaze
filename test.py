@@ -95,7 +95,7 @@ output_dir=os.path.join(args.model_save_dir,'')
 
 # --- Gpu device --- #
 device_ids = [Id for Id in range(torch.cuda.device_count())]
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # --- Define the network --- #
 # --- Define the Swin Transformer V2 model --- #
