@@ -124,7 +124,7 @@ MyEnsembleNet= torch.nn.DataParallel(MyEnsembleNet, device_ids=device_ids)
 
 
 # --- Load the network weight --- #
-MyEnsembleNet.load_state_dict(torch.load(args.ckpt_path))              
+MyEnsembleNet.model.load_state_dict(torch.load(args.ckpt_path))              
 
 
 # --- Strat testing --- #
